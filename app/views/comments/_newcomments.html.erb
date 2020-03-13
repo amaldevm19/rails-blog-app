@@ -1,0 +1,14 @@
+<h3>Add comment</h3>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+    <div>
+        <%= f.label :username %>
+        <%= f.text_field(:username,{ :class => 'form-control'}) %>    
+    </div>
+    <div>
+        <%= f.label :body %>
+        <%= f.text_area(:body,{ :class => 'form-control'}) %>    
+    </div>
+    <div>
+        <%= f.submit({:class => 'btn btn-warning mt-2'}) %>
+    </div>
+<% end %>

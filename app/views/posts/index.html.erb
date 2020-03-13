@@ -1,0 +1,13 @@
+
+<div class='row justify-content-center'>
+    <%= link_to 'New', new_post_path, :class=> 'text-white btn btn-lg btn-success m-2' %>
+</div>
+
+<% @posts.each do |post| %>
+    <div class="jumbotron">
+        <h1 class="display-4"><%= post.title %></h1>
+        <p class="lead"><%= post.body %></p>
+        <%= link_to 'Read More...', post_path(post), :class => 'btn btn-primary btn-lg ' %>
+        <!--<a class="btn btn-primary btn-lg" href="#" role="button">Reed more</a>-->
+    </div>
+<% end %>
